@@ -36,7 +36,7 @@ class ProductTest extends TestCase
         $this->assertFalse($product->isMature());
     }
 
-public function testIsNotAvailableWhenInactive(): void
+    public function testIsNotAvailableWhenInactive(): void
     {
         $product = new Product();
         $product->setIsActive(false);
