@@ -27,7 +27,7 @@ class ProductTest extends TestCase
         $this->assertTrue($product->getStock() > 0);
     }
 
-    public function testIsMatureReturnsFalseByDefault():void
+    public function testIsMatureReturnsFalseByDefault(): void
     {
         $product = new Product();
 
@@ -53,5 +53,4 @@ class ProductTest extends TestCase
 
         $this->assertFalse($product->isAvailable());
     }
-
 }
