@@ -86,7 +86,8 @@ class PromotionServiceTest extends TestCase
         $this->assertFalse($this->service->isOnPromotion($product));
     }
 
-    public function testInvertedDatesAreNotActive() : void{
+    public function testInvertedDatesAreNotActive(): void
+    {
         $product = $this->createProduct(50.0);
         $product->setPromoPrice(40.0);
 
@@ -97,7 +98,8 @@ class PromotionServiceTest extends TestCase
         $this->assertFalse($this->service->isOnPromotion($product));
     }
 
-    public function testBoundaryStartIsIncluded():void{
+    public function testBoundaryStartIsIncluded(): void
+    {
         $product = $this->createProduct(50.0);
         $product->setPromoPrice(40.0);
         $now = $this->dateNow();
@@ -108,7 +110,7 @@ class PromotionServiceTest extends TestCase
         $this->assertTrue($this->service->isOnPromotion($product, $now));
     }
 
-    public function testBoundaryEndIsIncluded():void
+    public function testBoundaryEndIsIncluded(): void
     {
         $product = $this->createProduct(50.0);
         $product->setPromoPrice(40.0);
