@@ -40,7 +40,7 @@ class CatalogTest extends FunctionalTestCase
         $product = $this->repository(Product::class)->findOneBy(['reference' => 'LIM-001']);
         $this->assertNotNull($product);
 
-        $this->client->request('GET', '/products/' . $product->getId());
+        $this->client->request('GET', '/products/'.$product->getId());
 
         $this->assertResponseStatusCodeSame(404);
     }
@@ -52,7 +52,7 @@ class CatalogTest extends FunctionalTestCase
         $product = $this->repository(Product::class)->findOneBy(['reference' => 'LIM-001']);
         $this->assertNotNull($product);
 
-        $this->client->request('GET', '/products/' . $product->getId());
+        $this->client->request('GET', '/products/'.$product->getId());
 
         $this->assertResponseIsSuccessful();
         $this->assertSelectorTextContains('body', 'Limite Limite');
