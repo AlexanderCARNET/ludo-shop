@@ -63,7 +63,7 @@ class CatalogTest extends FunctionalTestCase
         // ajout de la Categorie fictive a un produi fictif
         $cat = new Category();
         $cat->setName('CatTest');
-        $cat->setSlug("cat-test");
+        $cat->setSlug('cat-test');
 
         $product = new Product();
         $product->setName('Produit de test');
