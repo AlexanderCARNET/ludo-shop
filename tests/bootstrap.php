@@ -23,7 +23,7 @@ if (!glob($sassOutputPattern)) {
         dirname(__DIR__)
     );
 
-    if (!is_resource($process) || proc_close($process) !== 0) {
+    if (!is_resource($process) || 0 !== proc_close($process)) {
         throw new RuntimeException('Unable to build Sass assets for the test suite.');
     }
 }
